@@ -1,0 +1,157 @@
+absl-py==0.10.0
+aiofiles==0.6.0
+aiohttp==3.6.3
+APScheduler==3.6.3
+astroid @ file:///tmp/build/80754af9/astroid_1592495912941/work
+astunparse==1.6.3
+async-generator==1.10
+async-timeout==3.0.1
+attrs @ file:///home/conda/feedstock_root/build_artifacts/attrs_1605083924122/work
+blis==0.4.1
+boto3==1.16.18
+botocore==1.19.18
+brotlipy==0.7.0
+cachetools==4.1.1
+catalogue==1.0.0
+certifi==2020.11.8
+cffi @ file:///tmp/build/80754af9/cffi_1605538068321/work
+chardet @ file:///home/conda/feedstock_root/build_artifacts/chardet_1602255302199/work
+cloudpickle==1.4.1
+colorclass==2.2.0
+coloredlogs==14.0
+colorhash==1.0.2
+cryptography @ file:///home/conda/feedstock_root/build_artifacts/cryptography_1604179079864/work
+cycler==0.10.0
+cymem @ file:///home/conda/feedstock_root/build_artifacts/cymem_1604919356432/work
+decorator==4.4.2
+dm-tree==0.1.5
+dnspython==1.16.0
+docopt==0.6.2
+fbmessenger==6.0.0
+fr-core-news-sm @ https://github.com/explosion/spacy-models/releases/download/fr_core_news_sm-2.3.0/fr_core_news_sm-2.3.0.tar.gz
+future==0.18.2
+gast==0.4.0
+google-auth==1.23.0
+google-auth-oauthlib==0.4.2
+google-pasta==0.2.0
+grpcio==1.33.2
+h11==0.9.0
+h5py==2.10.0
+httpcore==0.11.1
+httplib2==0.18.1
+httptools==0.1.1
+httpx==0.15.4
+humanfriendly==8.2
+idna @ file:///home/conda/feedstock_root/build_artifacts/idna_1593328102638/work
+importlib-metadata @ file:///home/conda/feedstock_root/build_artifacts/importlib-metadata_1602263269022/work
+isort @ file:///tmp/build/80754af9/isort_1602603989581/work
+jmespath==0.10.0
+joblib==0.15.1
+jsonpickle==1.4.1
+jsonschema @ file:///home/conda/feedstock_root/build_artifacts/jsonschema_1602551949684/work
+kafka-python==2.0.2
+Keras-Preprocessing==1.1.2
+kiwisolver==1.3.1
+lazy-object-proxy==1.4.3
+Markdown==3.3.3
+matplotlib==3.3.3
+mattermostwrapper==2.2
+mccabe==0.6.1
+mkl-fft==1.2.0
+mkl-random==1.1.1
+mkl-service==2.3.0
+multidict==4.7.6
+murmurhash==1.0.4
+networkx==2.5
+numpy==1.19.4
+oauth2client==4.1.3
+oauthlib==3.1.0
+opt-einsum==3.3.0
+packaging==20.4
+pandas @ file:///tmp/build/80754af9/pandas_1602088120436/work
+pika==1.1.0
+Pillow==8.0.1
+plac @ file:///tmp/build/80754af9/plac_1594261900949/work
+preshed @ file:///home/conda/feedstock_root/build_artifacts/preshed_1605166129992/work
+prompt-toolkit==2.0.10
+protobuf==3.14.0
+psycopg2-binary==2.8.6
+pyasn1==0.4.8
+pyasn1-modules==0.2.8
+pycparser @ file:///home/conda/feedstock_root/build_artifacts/pycparser_1593275161868/work
+pydot==1.4.1
+PyJWT==1.7.1
+pykwalify==1.7.0
+pylint @ file:///tmp/build/80754af9/pylint_1598623985952/work
+pymongo==3.10.1
+pyOpenSSL==19.1.0
+pyparsing==2.4.7
+pyrsistent @ file:///home/conda/feedstock_root/build_artifacts/pyrsistent_1605115595652/work
+PySocks @ file:///home/conda/feedstock_root/build_artifacts/pysocks_1602326928339/work
+python-crfsuite==0.9.7
+python-dateutil==2.8.1
+python-engineio==3.13.2
+python-socketio==4.6.0
+python-telegram-bot==12.8
+pytz==2020.4
+PyYAML==5.3.1
+questionary==1.5.2
+rank-bm25==0.2.1
+rasa==2.0.6
+rasa-sdk==2.0.0
+redis==3.5.3
+regex==2020.9.27
+requests @ file:///home/conda/feedstock_root/build_artifacts/requests_1605186911681/work
+requests-oauthlib==1.3.0
+requests-toolbelt==0.9.1
+rfc3986==1.4.0
+rocketchat-API==1.9.1
+rsa==4.6
+ruamel.yaml==0.16.12
+ruamel.yaml.clib==0.2.2
+s3transfer==0.3.3
+sanic==20.9.1
+Sanic-Cors==0.10.0.post3
+sanic-jwt==1.4.1
+Sanic-Plugins-Framework==0.9.4.post1
+scikit-learn==0.23.2
+scipy==1.5.4
+sentry-sdk==0.19.3
+six @ file:///tmp/build/80754af9/six_1605205327372/work
+sklearn-crfsuite==0.3.6
+slackclient==2.9.3
+sniffio==1.2.0
+spacy @ file:///home/conda/feedstock_root/build_artifacts/spacy_1594659152194/work
+SQLAlchemy==1.3.20
+srsly @ file:///home/conda/feedstock_root/build_artifacts/srsly_1605085673973/work
+tabulate==0.8.7
+tensorboard==2.4.0
+tensorboard-plugin-wit==1.7.0
+tensorflow==2.3.1
+tensorflow-addons==0.11.2
+tensorflow-estimator==2.3.0
+tensorflow-hub==0.9.0
+tensorflow-probability==0.11.1
+tensorflow-text==2.3.0
+termcolor==1.1.0
+terminaltables==3.1.0
+thinc @ file:///home/conda/feedstock_root/build_artifacts/thinc_1605011080847/work
+threadpoolctl==2.1.0
+toml @ file:///tmp/build/80754af9/toml_1592853716807/work
+tornado==6.1
+tqdm @ file:///home/conda/feedstock_root/build_artifacts/tqdm_1603658198734/work
+twilio==6.45.4
+typeguard==2.10.0
+tzlocal==2.1
+ujson==3.2.0
+Unidecode==1.1.1
+urllib3==1.26.2
+uvloop==0.14.0
+wasabi @ file:///home/conda/feedstock_root/build_artifacts/wasabi_1600272362626/work
+wcwidth==0.2.5
+webexteamssdk==1.6
+websockets==8.1
+Werkzeug==1.0.1
+wrapt==1.12.1
+yarl==1.5.1
+zipp @ file:///home/conda/feedstock_root/build_artifacts/zipp_1603668650351/work

@@ -1,0 +1,7 @@
+# stop unintended flashing screen after install
+xset s off
+xset -dpms
+xset s noblank
+
+# faster keys
+xset r rate 210 40
