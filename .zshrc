@@ -120,6 +120,11 @@ alias update="yay -Syu"
 alias install="yay -S"
 alias uninstall="yay -Rns"
 alias autoremove="yay -Yc"
+alias search="yay -Ss"
+alias upgradable="pacman -Qqe && pacman -Qqm"
+alias reboot="sudo reboot now"
+alias shutdown="sudo shutdown now"
+alias wifi="nmtui"
 # # env
 alias python=python3
 alias pip="python3 -m pip"
@@ -142,4 +147,22 @@ alias branch="git checkout"
 alias new="git checkout -n"
 alias merge="git merge"
 alias logs="git log"
+# td-cli
+alias t="td --interactive"
 # <<< aliases <<<
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/ztp/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/ztp/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/ztp/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/ztp/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
