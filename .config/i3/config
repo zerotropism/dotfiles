@@ -177,8 +177,8 @@ bindsym $mod+r mode "resize"
 bar {
         position top
 	status_command /usr/bin/bumblebee-status \
-		-m nic load cpu memory pasink pasource battery time \
-		-p time.format="%H:%M" memory.format={percent:02.00f}% nic.format='{state} {ip}'\
+		-m nic cpu memory pasink pasource battery time \
+		-p time.format="%H:%M" memory.format={percent:02.00f}% nic.format='{ip}' \
 		-t dracula-powerline
 }
 
@@ -198,7 +198,8 @@ set $term 	--no-startup-id alacritty
 ###############
 
 exec 		"setxkbmap -layout fr"
-exec_always 	--no-startup-id feh --bg-fill ~/Images/arch1.jpg
+exec_always 	--no-startup-id feh --bg-fill ~/Images/m9.png
+exec_always	--no-startup-id feh ~/.scripts/feh-blur
 exec_always 	--no-startup-id autotiling
 #exec_always 	--no-startup-id /home/ztp/.config/polybar-collection/launch.sh
 
@@ -213,6 +214,9 @@ gaps outer 5
 # Activate smart borders (always)
 #smart_gaps 	on
 smart_borders 	on
+
+# Browser pop-ups
+for_window [window_role="pop-up"] floating enable
 
 #################
 ### Shortcuts ###

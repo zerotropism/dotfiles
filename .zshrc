@@ -110,18 +110,16 @@ source $ZSH/oh-my-zsh.sh
 alias l="exa --long --header --git --group"
 alias ll="exa --long --header --git --group -al"
 # editors
-# alias vi ="/usr/bin/vim"
-# alias nv=nvim
-# alias n=nvim
+alias vi=vim
+alias nv=nvim
 # alias lv="/home/ztp/.local/bin/lvim"
-# alias v=lv
 # sys
 alias update="yay -Syu"
 alias install="yay -S"
 alias uninstall="yay -Rns"
 alias autoremove="yay -Yc"
 alias search="yay -Ss"
-alias upgradable="pacman -Qqe && pacman -Qqm"
+alias installed="pacman -Qqe && pacman -Qqm"
 alias reboot="sudo reboot now"
 alias shutdown="sudo shutdown now"
 alias wifi="nmtui"
