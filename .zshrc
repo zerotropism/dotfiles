@@ -159,6 +159,9 @@ alias goto="git checkout"
 alias new="git checkout -n"
 alias merge="git merge"
 alias logs="git log"
+# jupyter
+alias note="jupyter-notebook --no-browser"
+alias lab="jupyter-lab --no-browser"
 # td-cli
 alias t="td --interactive"
 # <<< aliases <<<
