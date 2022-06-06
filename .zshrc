@@ -1,3 +1,12 @@
+# >>> NOTE: COMMENT IF NO POWERLEVEL10K INSTALL >>>
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+# <<< END OF NOTE <<<
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -8,7 +17,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+#ZSH_THEME="robbyrussell"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -70,12 +80,11 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-	git
+plugins=(git
 	zsh-autosuggestions
-	zsh-syntax-highlighting
-	zsh-z
-)
+    	zsh-syntax-highlighting
+    	zsh-z
+	)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -110,7 +119,7 @@ source $ZSH/oh-my-zsh.sh
 alias l="exa --long --header --git --group"
 alias ll="exa --long --header --git --group -al"
 # editors
-alias vi=vim
+alias v=vim
 alias nv=nvim
 # alias lv="/home/ztp/.local/bin/lvim"
 # sys
@@ -134,14 +143,19 @@ alias vdeactivate="deactivate"
 alias activate="conda activate"
 alias deactivate="conda deactivate"
 alias envs="conda env list"
+alias condaupdate="conda update conda && conda update --all"
 # git
+alias clone="git clone"
 alias status="git status"
 alias add="git add"
 alias Add="git add --all"
 alias commit="git commit"
+alias save="git stash"
+alias load="git stash pop"
 alias push="git push"
+alias fetch="git fecth"
 alias pull="git pull"
-alias branch="git checkout"
+alias goto="git checkout"
 alias new="git checkout -n"
 alias merge="git merge"
 alias logs="git log"
@@ -164,3 +178,5 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
