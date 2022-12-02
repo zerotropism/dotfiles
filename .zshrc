@@ -118,6 +118,9 @@ source $ZSH/oh-my-zsh.sh
 # # nav
 alias l="exa --long --header --git --group"
 alias ll="exa --long --header --git --group -al"
+alias c="tree -ndlL 2"
+alias cc="tree -nlL 2"
+alias cs="tree -nlL"
 # editors
 alias v=vim
 alias nv=nvim
@@ -162,20 +165,21 @@ alias logs="git log"
 # jupyter
 alias note="jupyter-notebook --no-browser"
 alias lab="jupyter-lab --no-browser"
-# td-cli
+# qol
 alias t="td --interactive"
+alias theme="alacritty-themes"
 # <<< aliases <<<
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/ztp/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$("$HOME/.miniconda/bin/conda" 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/ztp/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/ztp/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "$HOME/.miniconda/etc/profile.d/conda.sh" ]; then
+        . "$HOME/.miniconda/etc/profile.d/conda.sh"
     else
-        export PATH="/home/ztp/miniconda3/bin:$PATH"
+        export PATH="$HOME/.miniconda/bin:$PATH"
     fi
 fi
 unset __conda_setup

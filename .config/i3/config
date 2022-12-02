@@ -159,10 +159,10 @@ mode "resize" {
         bindsym semicolon resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+        bindsym Left resize shrink width 2 px or 2 ppt
+        bindsym Down resize grow height 2 px or 2 ppt
+        bindsym Up resize shrink height 2 px or 2 ppt
+        bindsym Right resize grow width 2 px or 2 ppt
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
@@ -176,10 +176,11 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         position top
-	status_command /usr/bin/bumblebee-status \
-		-m nic cpu memory pasink pasource battery time \
-		-p time.format="%H:%M" memory.format={percent:02.00f}% nic.format='{ip}' \
-		-t dracula-powerline
+	status_command i3status
+	colors {
+		background #24283b
+    focused_workspace #e0af68 #24283b #c0caf5 
+	}
 }
 
 ####################
@@ -191,24 +192,23 @@ set $reboot	sudo -A reboot
 set $lock	i3lock -i ~/Images/i3.png
 set $suspend 	sudo systemctl suspend
 set $hibernate 	sudo -A systemctl hibernate
-set $term 	--no-startup-id alacritty
+set $term	--no-startup-id alacritty
 
 ###############
 ### Startup ###
 ###############
 
-exec 		"setxkbmap -layout fr"
-exec_always 	--no-startup-id feh --bg-fill ~/Images/m9.png
-exec_always	--no-startup-id feh ~/.scripts/feh-blur
+exec          "setxkbmap -layout fr"
+exec_always 	--no-startup-id feh --bg-fill ~/images/cb1.jpg
+exec_always	  --no-startup-id feh ~/.scripts/feh-blur
 exec_always 	--no-startup-id autotiling
-#exec_always 	--no-startup-id /home/ztp/.config/polybar-collection/launch.sh
 
 #############################
 ### Settings for i3-gaps: ###
 #############################
 
 # Set inner/outer gaps
-gaps inner 15
+gaps inner 5
 gaps outer 5
 
 # Activate smart borders (always)
@@ -223,28 +223,28 @@ for_window [window_role="pop-up"] floating enable
 #################
 
 # Apps
-bindsym $mod+Return 		exec $term
+bindsym $mod+Return 		  exec $term
 bindsym $mod+Shift+Return	exec firefox
-bindsym $mod+d 			exec rofi -font "SF Mono 14" -show drun
-bindsym $mod+e 			exec $term -e ranger
+bindsym $mod+d 			      exec rofi -font "SF Mono 14" -show drun
+bindsym $mod+e 			      exec $term -e ranger
 
 # Processes
-bindsym $mod+l 			exec --no-startup-id $lock
-bindsym $mod+Shift+s 		exec --no-startup-id $suspend
-bindsym $mod+x			exec --no-startup-id $reboot
-bindsym $mod+Shift+x		exec --no-startup-id $shutdown
+bindsym $mod+l 			  exec --no-startup-id $lock
+bindsym $mod+Shift+s 	exec --no-startup-id $suspend
+bindsym $mod+x			  exec --no-startup-id $reboot
+bindsym $mod+Shift+x	exec --no-startup-id $shutdown
 
 # Sound control
-bindsym XF86AudioRaiseVolume 	exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
-bindsym XF86AudioLowerVolume 	exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
-bindsym XF86AudioMute 		exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+bindsym XF86AudioRaiseVolume 	exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +1% && $refresh_i3status
+bindsym XF86AudioLowerVolume 	exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -1% && $refresh_i3status
+bindsym XF86AudioMute 		    exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 
 # Screen brightness controls
-bindsym XF86MonBrightnessUp	exec --no-startup-id brightnessctl set +5%
+bindsym XF86MonBrightnessUp	    exec --no-startup-id brightnessctl set +5%
 bindsym XF86MonBrightnessDown 	exec --no-startup-id brightnessctl set 5%-
 
 # Media player controls
-bindsym XF86AudioPlay 		exec playerctl play-pause
+bindsym XF86AudioPlay exec playerctl play-pause
 
 ##################
 ### Appearence ###
@@ -259,7 +259,7 @@ bindsym XF86AudioPlay 		exec playerctl play-pause
 #client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 #client.background       #ffffff
 
-client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
+client.focused          #e0af68 #e0af68 #e0af68 #e0af68   #e0af68
 client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
 client.unfocused        #333333 #222222 #888888 #292d2e   #222222
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
